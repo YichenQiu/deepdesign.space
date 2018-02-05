@@ -61,10 +61,10 @@ $('#image-upload-form').on('submit', function(e) {
 
         sortedData.forEach(function(obj) {
             $('#predictions-container').append(
-                '<span style="margin-right: 45px; font-weight: bold; text-transform: uppercase">' +
+                '<span class="prediction">' +
                     '<a title="See more ' + obj.style + ' styles" class="style-link" target="_blank" href="https://google.com/search?q=' + obj.style + '+interior+design&tbm=isch">' + obj.style + '</a>: '  + obj.value +
                 '</span>'
-            );
+            ).css('background', '#3a3a3a');
         });
 
         $("html, body").animate({ scrollTop: $('#predictions-container').offset().top }, 600);

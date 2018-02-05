@@ -2,9 +2,10 @@ from flask import Flask, render_template, json, jsonify, request, Response
 import io
 import jsonpickle
 import numpy as np
+# import cv2
 from PIL import Image
 from Model.ModelClass import inception_retrain
-
+#from scripts.label_image import predict_result
 
 app = Flask(__name__)
 

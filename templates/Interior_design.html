@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Interior Design Image Classifier</title>
+
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/vendor/simple-line-icons/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../static/css/landing-page.css">
+  </head>
+
+  <body>
+
+    <header class="masthead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Interior Design Image Classifier</h1>
+            <h5>Created by Yichen Qiu</h5>
+          </div>
+        </div>
+      </div>
+      <form id="image-upload-form" class="form-control-file" style="position: absolute; left: 50%; transform: translate(-50%, 0); margin-top: 65px;">
+        <input id="file-input" type="file" name="photo" style="padding-bottom: 20px;" />
+        <div>
+          <button id="submit-button"
+                class="btn btn-lg btn-block"
+                type="submit"
+                style="margin-top: 12px; padding: .2rem 1rem;">Classify</button>
+        </div>
+      </form>
+    </header>
+
+    <section class="bg-light" style="padding-top: 12px;">
+      <div class="container">
+        <div class="row">
+          <div style="margin: 0 auto;">
+            <div id="error"></div>
+            <div id="predictions-container" style="padding-top: 32px"></div>
+          </div>
+        </div>
+
+        <div class="row mt-sm-4">
+            <div id="image-container"
+                 class="image-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../static/vendor/popper.min.js"></script>
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../static/js/interior_design.js"></script>
+  </body>
+
+</html>

@@ -27,7 +27,9 @@ All images were passed through Google's pretrained Inception V3 neutral networks
 | FULLY CONNECTED LAYER WITH SOFTMAX CLASSIFIER |       0.4      |
 </p>
 The final model is a mini neural networks with one fully connected layer and softmax classifier. `Model/train_inception.py` contains script to train the model using keras. 
+
 `inception.h5`: saved Inception V3 model.
+
 `inV3_last_layer.h5`: saved neural networks with one fully connected layer and softmax classifier.
 
 ## Model Evaluation

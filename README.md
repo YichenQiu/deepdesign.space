@@ -35,7 +35,7 @@ The final model is a mini neural networks with one fully connected layer and sof
 `inV3_last_layer.h5`: saved neural networks with one fully connected layer and softmax classifier.
 
 ## Model Evaluation
-Model accuracy score by design style. The model seems to have the most difficulty recognizing *Coastal* and *Industrial*.
+Model accuracy score by design style. The model seems to recognize some *Coastal* and *Industrial* images as *Scandinavian*. However, this may not be considered as missclassification because sometimes one room may contain a mix of multiple design styles.
 <p align="center">
   <img src="https://github.com/YichenQiu/deepdesign.space/blob/master/images/Normalized_confusion1.png" width="400" height="350">
 </p>

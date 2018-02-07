@@ -1,4 +1,4 @@
-# DEEPDESIGN  
+# DEEP DESIGN  
 An image classifier for interior design styles. User can upload a photo of an interior space and see how much his image belongs to a certian interior design style.
 
 Try it out at www.deepdesign.space 

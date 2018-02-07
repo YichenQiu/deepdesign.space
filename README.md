@@ -1,4 +1,4 @@
-# DEEPDESIGN  
+# DEEP DESIGN  
 An image classifier for interior design styles. User can upload a photo of an interior space and see how much his image belongs to a certian interior design style.
 
 Try it out at www.deepdesign.space 
@@ -18,12 +18,12 @@ Styles currently being recognized: *Bohemian*, *Coastal*, *Industrial*, *Scandin
 All images were passed through Google's pretrained Inception V3 neutral networks. 2048 features were extracted for each image. 
 `Explore_models.ipynb` shows the process of using 5-Fold Cross-Validation to choose the best performing model. 
 
-|                     MODEL                     | LOG_LOSS SCORE | ACCURACY SCORE |
-|:---------------------------------------------:|:--------------:|:--------------:|
-|              LOGISTIC REGRESSION              |      0.492     |      0.846     |
-|            RANDOM FOREST CLASSIFIER           |      0.883     |      0.767     |
-|          GRADIENT BOOSTING CLASSIFIER         |      0.59      |      0.817     |
-| FULLY CONNECTED LAYER WITH SOFTMAX CLASSIFIER |       0.4      |      0.861     |
+|                     MODEL                     | LOG_LOSS SCORE | 
+|:---------------------------------------------:|:--------------:|
+|              LOGISTIC REGRESSION              |      0.492     |
+|            RANDOM FOREST CLASSIFIER           |      0.883     |
+|          GRADIENT BOOSTING CLASSIFIER         |      0.59      |
+| FULLY CONNECTED LAYER WITH SOFTMAX CLASSIFIER |       0.4      |
 
 The final model is a mini neural networks with one fully connected layer and softmax classifier. `Model/train_inception.py` contains script to train the model using keras. 
 `inception.h5`: saved Inception V3 model.

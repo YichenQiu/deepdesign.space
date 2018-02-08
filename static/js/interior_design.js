@@ -1,7 +1,7 @@
 /* Display image */
 var imageInput = document.getElementById('file-input');
 var imageContainer = document.getElementById('image-container');
-var maxImageSize = 12000000;
+var maxImageSize = 100000000;
 
 imageInput.addEventListener('change', function() {
     var imageFile = this.files[0];

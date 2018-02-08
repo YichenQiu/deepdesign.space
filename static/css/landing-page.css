@@ -194,3 +194,61 @@ button:hover {
   color: white;
   font-size: 20px;
 }
+
+.hide {
+  display: none;
+}
+
+.bg-light {
+  padding-top: 12px;
+}
+
+@media (max-width: 680px) {
+  header.masthead {
+    padding-bottom: 12rem;
+  }
+
+  .inner-container {
+    background: #3a3a3a;
+  }
+
+  .bg-light {
+    padding-top: 0;
+  }
+
+  .predictions-container {
+    margin-top: 0;
+  }
+
+  .image-container {
+    padding-bottom: 150px;
+  }
+
+  #file-input {
+    padding-left: 30px;
+  }
+
+  #submit-button {
+    margin: 0 auto;
+    width: 200px;
+  }
+
+  #image-container img {
+    width: 100%;
+  }
+
+  #image-upload-form {
+    left: 56%;
+  }
+
+  .overlay-links {
+    right: 15px;
+    top: 10px;
+  }
+}
+
+@media (max-width: 1093px) {
+  .prediction {
+    display: block;
+  }
+}

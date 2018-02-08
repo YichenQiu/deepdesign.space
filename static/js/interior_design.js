@@ -1,14 +1,18 @@
 /* Display image */
 var imageInput = document.getElementById('file-input');
 var imageContainer = document.getElementById('image-container');
-var maxImageSize = 16000000;
+var maxImageSize = 12000000;
 
 imageInput.addEventListener('change', function() {
     var imageFile = this.files[0];
 
     if (imageFile.size > maxImageSize) {
-        console.error('max size' + maxImageSize + 'exceeded');
+        console.error('max size' + maxImageSize + ' exceeded');
+        alert('max size' + maxImageSize + ' exceeded');
+        return;
     }
+
+    $('.inner-container').removeClass('hide');
 
     var reader = new FileReader();
 
@@ -17,7 +21,7 @@ imageInput.addEventListener('change', function() {
         image.src = e.target.result;
 
         $(imageContainer).empty();
-        $('#predictions-container').empty();
+        $('#predictions-container').empty().hide();
         imageContainer.appendChild(image);
     };
 
@@ -34,6 +38,9 @@ $('#image-upload-form').on('submit', function(e) {
     }
 
     var form_data = new FormData($(this)[0]);
+    $('#predictions-container').empty().hide();
+    $('#loading-text').removeClass('hide');
+    $('#submit-button').prop('disabled',true);
 
     $.ajax({
         cache: false,
@@ -64,15 +71,20 @@ $('#image-upload-form').on('submit', function(e) {
                 '<span class="prediction">' +
                     '<a title="See more ' + obj.style + ' styles" class="style-link" target="_blank" href="https://google.com/search?q=' + obj.style + '+interior+design&tbm=isch">' + obj.style + '</a>: '  + obj.value +
                 '</span>'
-            ).css('background', '#3a3a3a');
+            );
         });
 
+        $('#predictions-container').show().css('background', '#3a3a3a');
         $("html, body").animate({ scrollTop: $('#predictions-container').offset().top }, 600);
    })
    .fail(function(xhr, status, errorThrown) {
-        alert("Sorry, there was a problem!");
+        alert("Sorry, there was a problem! - Error: " + errorThrown + " - Status: " + status);
         console.log("Error: " + errorThrown);
         console.log("Status: " + status);
         console.dir(xhr);
+    })
+    .always(function() {
+        $('#loading-text').addClass('hide');
+        $('#submit-button').prop('disabled', false);
     });
 });

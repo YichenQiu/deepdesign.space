@@ -37,18 +37,21 @@
                 type="submit"
                 style="margin-top: 12px; padding: .2rem 1rem;">Classify</button>
         </div>
+        <div id="loading-text" class="hide">
+          Loading...
+        </div>
       </form>
       <div class="overlay-links">
         <a href="https://github.com/YichenQiu/deepdesign.space/#readme">
-          <img src="../static/img/Github-Mark-Light-64px.png" style="width: 40px; vertical-align: bottom;" alt="" role="presentation">
+          <!-- <img src="../static/img/Github-Mark-Light-64px.png" style="width: 40px; vertical-align: bottom;" alt="" role="presentation"> -->
           Github
         </a>
       </div>
     </header>
 
-    <section class="bg-light" style="padding-top: 12px;">
+    <section class="bg-light">
       <div class="container">
-        <div class="row">
+        <div class="row inner-container hide">
           <div style="margin: 0 auto;">
             <div id="error"></div>
             <div id="predictions-container" class="predictions-container"></div>

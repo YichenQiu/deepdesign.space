@@ -9,7 +9,7 @@ from Model.ModelClass import inception_retrain
 
 app = Flask(__name__)
 
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 # 16 mb image
+app.config['MAX_CONTENT_LENGTH'] = 12 * 1024 * 1024 # 16 mb image
 model=None
 
 @app.route("/")

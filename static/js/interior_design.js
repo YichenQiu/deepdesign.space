@@ -1,16 +1,16 @@
 /* Display image */
 var imageInput = document.getElementById('file-input');
 var imageContainer = document.getElementById('image-container');
-var maxImageSize = 100000000;
+// var maxImageSize = 100000000;
 
 imageInput.addEventListener('change', function() {
     var imageFile = this.files[0];
 
-    if (imageFile.size > maxImageSize) {
-        console.error('max size' + maxImageSize + ' exceeded');
-        alert('max size' + maxImageSize + ' exceeded');
-        return;
-    }
+    // if (imageFile.size > maxImageSize) {
+    //     console.error('max size' + maxImageSize + ' exceeded');
+    //     alert('max size' + maxImageSize + ' exceeded');
+    //     return;
+    // }
 
     $('.inner-container').removeClass('hide');
 
